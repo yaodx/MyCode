@@ -1,0 +1,20 @@
+<properties>
+	<!-- redis连接池配置
+	参考文档：http://yin-bp.iteye.com/blog/2360280	
+	 -->
+	<property name="default" class="org.frameworkset.nosql.redis.RedisDB">
+		<property name="nodes">  
+        	<list componentType="bean">
+				<property class="org.frameworkset.nosql.redis.NodeInfo" f:host="47.94.204.84" f:port="6379" />	        	
+			</list>
+        </property>
+		<!-- single|cluster-->
+		<property name="mode" value="single" />
+		<!-- 如果redis需要认证，则放开以下注释 -->	
+		<property name="auth" value="710309471" />
+		<property name="poolMaxTotal" value="10"/>	
+		<property name="poolMaxWaitMillis" value="2000"/>		
+		 
+	</property>
+	 
+</properties>
